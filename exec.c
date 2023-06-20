@@ -6,7 +6,6 @@
 void find(void)
 {
 	listOfinst_t *tmp = Global.opcodes;
-	char *n;
 
 	if (!Global.inst[0])
 	{
@@ -28,12 +27,7 @@ void find(void)
 		}
 		tmp = tmp->next;
 	}
-	n = _itoa(Global.ln);
-	print("L", 2, 0);
-	print(n, 2, 0);
-	print(": unknown instruction ", 2, 0);
-	print(Global.inst[0], 2, 1);
-	free(n);
+	dprintf(2, "L%u: unknown instruction %s\n", Global.ln, Global.inst[0]);
 	free(Global.line);
 	free_inst(Global.inst);
 	free_all();
