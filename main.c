@@ -5,7 +5,7 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		print("USAGE: monty file", 2, 1);
+		dprintf(2, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 	init(av[1]);
