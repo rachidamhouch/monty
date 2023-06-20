@@ -21,7 +21,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	char *n;
 
-	if (!is_num(Global.inst[1]) || Global.inst[2])
+	if (!is_num(Global.inst[1]))
 	{
 		n = _itoa(line_number);
 		print("L", 2, 0);
