@@ -13,7 +13,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 		dprintf(2, "L%u: can't pchar, stack empty\n", line_number);
 		mexit();
 	}
-	if ((*stack)->n < 0 || (*stack)->n > 255)
+	if ((*stack)->n < 0 || (*stack)->n >= 128)
 	{
 		dprintf(2, "L%u: can't pchar, value out of range\n", line_number);
 		mexit();
