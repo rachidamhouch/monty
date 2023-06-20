@@ -5,8 +5,7 @@ void init(char *name)
 	Global.fd = open(name, O_RDONLY);
 	if (Global.fd < 0)
 	{
-		print("ERROR: Can't open file ", 2, 0);
-		print(name, 2, 1);
+		dprintf(2, "Error: can't open file %s\n", name);
         exit(EXIT_FAILURE);
 	}
 	Global.stack = NULL;
