@@ -6,7 +6,7 @@ int is_num(char *str)
 
 	if (!str)
 		return (0);
-	if (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-')
 		i++;
 	while (str[i])
 	{
@@ -14,8 +14,6 @@ int is_num(char *str)
 			return (0);
 		i++;
 	}
-	if (i == 1 && (str[0] == '-' || str[0] == '+'))
-		return (0);
 	return (1);
 }
 
