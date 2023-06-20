@@ -15,6 +15,11 @@ void mod(stack_t **stack, unsigned int line_number)
 		dprintf(2, "L%u: can't mod, stack too short\n", line_number);
 		mexit();
 	}
+	if (!((*stack)->n))
+	{
+		dprintf(2, "L%u: division by zero\n", line_number);
+		mexit();
+	}
 	a = (*stack)->n;
 	pop(stack, line_number);
 	(*stack)->n %= a;
