@@ -14,20 +14,16 @@ int is_num(char *str)
 			return (0);
 		i++;
 	}
+	if (i == 1 && (str[0] == '-' || str[0] == '+'))
+		return (0);
 	return (1);
 }
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	char *n;
-
 	if (!is_num(Global.inst[1]))
 	{
-		n = _itoa(line_number);
-		print("L", 2, 0);
-		print(n, 2, 0);
-		print(": usage: push integer", 2, 1);
-		free(n);
+		dprintf(2, "L%u: usage: push integer\n", line_number);
 		mexit();
 	}
 	add_node_stack(stack, _atoi(Global.inst[1]));
