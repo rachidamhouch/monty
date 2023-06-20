@@ -52,6 +52,6 @@ void add_new_inst(char *opcode, void (*f)(stack_t **stack, unsigned int line_num
 
 	tmp = malloc(sizeof(instruction_t));
 	tmp->f = f;
-	tmp->opcode = _strdup(opcode);
+	tmp->opcode = strdup(opcode);
 	add_node_inst(&Global.opcodes, tmp);
 }
