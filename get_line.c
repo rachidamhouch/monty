@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * all - ...
+ * @fd: Arg 1.
+ * @left: arg 2.
+ * Return: ...
+ */
 static char	*all(int fd, char *left)
 {
 	char	*buffer;
@@ -24,6 +30,11 @@ static char	*all(int fd, char *left)
 	return (left);
 }
 
+/**
+ * get_line - ...
+ * @line: Arg 1.
+ * Return: ...
+ */
 static char	*get_line(char *line)
 {
 	int		i;
@@ -50,6 +61,11 @@ static char	*get_line(char *line)
 	return (ptr);
 }
 
+/**
+ * ft_left - ...
+ * @line: Arg 1.
+ * Return: ...
+ */
 static char	*ft_left(char *line)
 {
 	int		i;
@@ -70,6 +86,11 @@ static char	*ft_left(char *line)
 	return (ptr);
 }
 
+/**
+ * get_next_line - ...
+ * @fd: Arg 1.
+ * Return: ...
+ */
 char	*get_next_line(int fd)
 {
 	static char	*left;

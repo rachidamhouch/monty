@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * is_sep - ...
+ * @c: Arg 1.
+ * @sep: arg 2.
+ * Return: ...
+ */
 int	is_sep(char c, char *sep)
 {
 	int	i;
@@ -14,6 +20,14 @@ int	is_sep(char c, char *sep)
 	return (0);
 }
 
+/**
+ * ft_set - ...
+ * @len: Arg 1.
+ * @word: arg 2.
+ * @count: arg 3.
+ * @i: arg 4.
+ * Return: ...
+ */
 void	ft_set(int *len, int *word, int *count, int *i)
 {
 	*len = 0;
@@ -22,6 +36,12 @@ void	ft_set(int *len, int *word, int *count, int *i)
 	*i = 0;
 }
 
+/**
+ * count_word - ...
+ * @str: Arg 1.
+ * @sep: arg 2.
+ * Return: ...
+ */
 int	count_word(char *str, char *sep)
 {
 	int	len;
@@ -47,6 +67,13 @@ int	count_word(char *str, char *sep)
 	return (count);
 }
 
+/**
+ * ft_dup - ...
+ * @str: Arg 1.
+ * @charset: arg 2.
+ * @index: arg 3.
+ * Return: ...
+ */
 char	*ft_dup(char *str, char *charset, int *index)
 {
 	char	*ptr;
@@ -75,6 +102,12 @@ char	*ft_dup(char *str, char *charset, int *index)
 	return (ptr);
 }
 
+/**
+ * split - ...
+ * @str: Arg 1.
+ * @charset: arg 2.
+ * Return: ...
+ */
 char	**split(char *str, char *charset)
 {
 	char	**ptr;

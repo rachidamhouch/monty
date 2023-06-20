@@ -1,8 +1,5 @@
 #include "monty.h"
 
-
-
-
 /**
  * stack_len - function that return the number of elm.
  * @h: Arg 1.

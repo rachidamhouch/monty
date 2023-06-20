@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * is_num - ...
+ * @str: Arg 1.
+ * Return: ...
+ */
 int is_num(char *str)
 {
 	int i = 0;
@@ -17,6 +22,12 @@ int is_num(char *str)
 	return (1);
 }
 
+/**
+ * push - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
 void push(stack_t **stack, unsigned int line_number)
 {
 	if (!is_num(Global.inst[1]))

@@ -1,12 +1,17 @@
 #include "monty.h"
 
+/**
+ * init - ...
+ * @name: Arg 1.
+ * Return: ...
+ */
 void init(char *name)
 {
 	Global.fd = open(name, O_RDONLY);
 	if (Global.fd < 0)
 	{
 		dprintf(2, "Error: can't open file %s\n", name);
-        exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	Global.stack = NULL;
 	Global.opcodes = NULL;

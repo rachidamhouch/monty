@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * my_memcpy - ...
+ * @dst: Arg 1.
+ * @src: arg 2.
+ * @n: arg 3.
+ * Return: ...
+ */
 void	*my_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*d;
@@ -17,6 +24,11 @@ void	*my_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+/**
+ * my_strlen - ...
+ * @s: Arg 1.
+ * Return: ...
+ */
 size_t	my_strlen(const char *s)
 {
 	size_t	n;
@@ -27,6 +39,12 @@ size_t	my_strlen(const char *s)
 	return (n);
 }
 
+/**
+ * my_strjoin - ...
+ * @s1: Arg 1.
+ * @s2: arg 2.
+ * Return: ...
+ */
 char	*my_strjoin(char *s1, char *s2)
 {
 	size_t	ls1;
@@ -55,6 +73,12 @@ char	*my_strjoin(char *s1, char *s2)
 	return (ptr);
 }
 
+/**
+ * my_strchr - ...
+ * @s: Arg 1.
+ * @c: arg 2.
+ * Return: ...
+ */
 char	*my_strchr(const char *s, int c)
 {
 	char	*n;

@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * sub - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
 void sub(stack_t **stack, unsigned int line_number)
 {
 	char	*n;

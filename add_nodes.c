@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- * add_dnodeint - function that adds a new node
- * at the beginning of a dlistint_t list.
+ * add_node_stack - ...
  * @head: Arg 1.
  * @n: arg 2.
- * Return: the address of the new element, or NULL if it failed.
+ * Return: ...
  */
 stack_t *add_node_stack(stack_t **head, const int n)
 {
@@ -27,11 +26,10 @@ stack_t *add_node_stack(stack_t **head, const int n)
 }
 
 /**
- * add_node - function that adds a new node
- * at the beginning of a list_t list.
+ * add_node_inst - ...
  * @head: Arg 1.
- * @str: arg 2.
- * Return: the address of the new element, or NULL if it failed.
+ * @inst: arg 2.
+ * Return: ...
  */
 listOfinst_t	*add_node_inst(listOfinst_t **head, instruction_t *inst)
 {
@@ -46,12 +44,17 @@ listOfinst_t	*add_node_inst(listOfinst_t **head, instruction_t *inst)
 	return (node);
 }
 
-void add_new_inst(char *opcode, void (*f)(stack_t **stack, unsigned int line_number))
+/**
+ * add_new_inst - ...
+ * @o: Arg 1.
+ * @f: arg 2.
+ */
+void add_new_inst(char *o, void (*f)(stack_t **s, unsigned int l))
 {
 	instruction_t *tmp;
 
 	tmp = malloc(sizeof(instruction_t));
 	tmp->f = f;
-	tmp->opcode = strdup(opcode);
+	tmp->opcode = strdup(o);
 	add_node_inst(&Global.opcodes, tmp);
 }

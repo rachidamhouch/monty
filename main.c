@@ -1,6 +1,12 @@
 #include "monty.h"
 global_t Global;
 
+/**
+ * main - ...
+ * @ac: Arg 1.
+ * @av: arg 2.
+ * Return: ...
+ */
 int main(int ac, char **av)
 {
 	if (ac != 2)

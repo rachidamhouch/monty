@@ -19,40 +19,40 @@
  */
 typedef struct stack_s
 {
-    int n;
-    struct stack_s *prev;
-    struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 
-/*
+/**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+		char *opcode;
+		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
- * struct listOfinst_S - list of listOfinst_t
+ * struct listOfinst_s - list of listOfinst_t
  * @inst: elm 1.
  * @next: elm 2.
  * Description: Global variable
  */
 typedef struct listOfinst_s
 {
-    instruction_t *inst;
-    struct listOfinst_s *next;
-}listOfinst_t;
+	instruction_t *inst;
+	struct listOfinst_s *next;
+} listOfinst_t;
 
 /**
- * struct instruction_s - opcode and its function
+ * struct global_s - opcode and its function
  * @stack: elm 1.
  * @inst: elm 2.
  * @left: elm 3.
@@ -64,13 +64,13 @@ typedef struct listOfinst_s
  */
 typedef struct global_s
 {
-    char *left;
-    int ln;
-    stack_t *stack;
-    char    **inst;
-    int     fd;
-    listOfinst_t *opcodes;
-    char    *line;
+	char *left;
+	int ln;
+	stack_t *stack;
+	char    **inst;
+	int     fd;
+	listOfinst_t *opcodes;
+	char    *line;
 } global_t;
 extern global_t Global;
 
@@ -85,16 +85,16 @@ char	**split(char *str, char *charset);
 void    init(char *name);
 int     print(char *str, int fd, int new);
 char	*_strdup(const char *s1);
-void    add_new_inst(char *opcode, void (*f)(stack_t **stack, unsigned int line_number));
-void    exic();
+void    add_new_inst(char *o, void (*f)(stack_t **s, unsigned int l));
+void    exic(void);
 int     _strncmp(const char *s1, const char *s2, size_t n);
 void    pall(stack_t **stack, unsigned int line_number);
 int     _atoi(char *s);
 char	*_itoa(int n);
 void    free_inst(char **str);
-void    free_all();
+void    free_all(void);
 void    push(stack_t **stack, unsigned int line_number);
-void    mexit();
+void    mexit(void);
 void    pint(stack_t **stack, unsigned int line_number);
 void    nop(stack_t **stack, unsigned int line_number);
 void    pop(stack_t **stack, unsigned int line_number);

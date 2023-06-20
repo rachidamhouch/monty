@@ -1,6 +1,9 @@
 #include "monty.h"
 
-void find()
+/**
+ * find - ...
+ */
+void find(void)
 {
 	listOfinst_t *tmp = Global.opcodes;
 	char *n;
@@ -37,6 +40,11 @@ void find()
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * rm_new_line - ...
+ * @ptr: Arg 1.
+ * Return: ...
+ */
 char *rm_new_line(char *ptr)
 {
 	int len = 0, i = 0;
@@ -57,9 +65,13 @@ char *rm_new_line(char *ptr)
 	return (new);
 }
 
-void exic()
+/**
+ * exic - ...
+ */
+void exic(void)
 {
 	char *line;
+
 	line = rm_new_line(get_next_line(Global.fd));
 	while (line)
 	{
