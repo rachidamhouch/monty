@@ -15,7 +15,7 @@ void divv(stack_t **stack, unsigned int line_number)
 		dprintf(2, "L%u: can't div, stack too short\n", line_number);
 		mexit();
 	}
-	if (!(*stack))
+	if (!(*stack)->n)
 	{
 		dprintf(2, "L%u: division by zero\n", line_number);
 	}
