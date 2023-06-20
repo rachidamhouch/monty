@@ -17,7 +17,7 @@ void find()
 			free_inst(Global.inst);
 			return;
 		}
-		if (!_strncmp(tmp->inst->opcode, Global.inst[0], _strlen(Global.inst[0]) + 1))
+		if (!strncmp(tmp->inst->opcode, Global.inst[0], strlen(Global.inst[0]) + 1))
 		{
 			tmp->inst->f(&Global.stack, Global.ln);
 			free_inst(Global.inst);

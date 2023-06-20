@@ -84,7 +84,6 @@ void	*my_memcpy(void *dst, const void *src, size_t n);
 char	**split(char *str, char *charset);
 void    init(char *name);
 int     print(char *str, int fd, int new);
-size_t	_strlen(const char *s);
 char	*_strdup(const char *s1);
 void    add_new_inst(char *opcode, void (*f)(stack_t **stack, unsigned int line_number));
 void    exic();
