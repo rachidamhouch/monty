@@ -8,16 +8,11 @@
  */
 void mul(stack_t **stack, unsigned int line_number)
 {
-	char	*n;
 	int		a;
 
 	if (stack_len(*stack) < 2)
 	{
-		n = _itoa(line_number);
-		print("L", 2, 0);
-		print(n, 2, 0);
-		print(": can't mul, stack to short", 2, 1);
-		free(n);
+		dprintf(2, "L%u: can't mul, stack too short\n", line_number);
 		mexit();
 	}
 	a = (*stack)->n;
