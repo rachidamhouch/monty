@@ -13,7 +13,7 @@ void swap(stack_t **stack, unsigned int line_number)
 
 	if (stack_len(*stack) < 2)
 	{
-		dprintf(2, "L%u: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		mexit();
 	}
 	a = (*stack)->n;

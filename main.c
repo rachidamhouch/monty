@@ -11,7 +11,7 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		dprintf(2, "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	init(av[1]);

@@ -13,8 +13,8 @@ void pstr(stack_t **stack, unsigned int line_number)
 	(void)line_number;
 	while (head && head->n > 0 && head->n < 128)
 	{
-		dprintf(1, "%c", head->n);
+		fprintf(stdout, "%c", head->n);
 		head = head->next;
 	}
-	dprintf(1, "\n");
+	fprintf(stdout, "\n");
 }

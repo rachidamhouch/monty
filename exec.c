@@ -27,7 +27,7 @@ void find(void)
 		}
 		tmp = tmp->next;
 	}
-	dprintf(2, "L%u: unknown instruction %s\n", Global.ln, Global.inst[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", Global.ln, Global.inst[0]);
 	free(Global.line);
 	free_inst(Global.inst);
 	free_all();

@@ -12,12 +12,12 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (stack_len(*stack) < 2)
 	{
-		dprintf(2, "L%u: can't mod, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
 		mexit();
 	}
 	if (!((*stack)->n))
 	{
-		dprintf(2, "L%u: division by zero\n", line_number);
+		fprintf(stderr, "L%u: division by zero\n", line_number);
 		mexit();
 	}
 	a = (*stack)->n;
