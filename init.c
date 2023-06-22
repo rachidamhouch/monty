@@ -31,4 +31,5 @@ void init(char *name)
 	add_new_inst("pchar", pchar);
 	add_new_inst("pstr", pstr);
 	add_new_inst("rotl", rotl);
+	add_new_inst("rotr", rotr);
 }
