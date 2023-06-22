@@ -30,4 +30,5 @@ void init(char *name)
 	add_new_inst("mod", mod);
 	add_new_inst("pchar", pchar);
 	add_new_inst("pstr", pstr);
+	add_new_inst("rotl", rotl);
 }
