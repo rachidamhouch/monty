@@ -55,6 +55,7 @@ void free_all(void)
 	free_stack(Global.stack);
 	free_opcodes(Global.opcodes);
 	free(Global.left);
+	close(Global.fd);
 }
 
 /**
