@@ -10,7 +10,7 @@ void init(char *name)
 	Global.fd = open(name, O_RDONLY);
 	if (Global.fd < 0)
 	{
-		fprintf(stderr, "Erro: can't open file %s\n", name);
+		fprintf(stderr, "Error: can't open file %s\n", name);
 		exit(EXIT_FAILURE);
 	}
 	Global.stack = NULL;
