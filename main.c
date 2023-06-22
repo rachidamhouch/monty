@@ -9,6 +9,9 @@ global_t Global;
  */
 int main(int ac, char **av)
 {
+	char *t = malloc(20);
+
+	(void)t;
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
