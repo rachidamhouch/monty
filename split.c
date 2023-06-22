@@ -96,6 +96,11 @@ char	*ft_dup(char *str, char *charset, int *index)
 		(*index)++;
 	}
 	ptr = malloc(count + 1);
+	if (!ptr)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	while (i < count)
 		ptr[i++] = str[in++];
 	ptr[i] = '\0';
@@ -119,6 +124,11 @@ char	**split(char *str, char *charset)
 	i = 0;
 	count = count_word(str, charset);
 	ptr = malloc(sizeof(char *) * (count + 1));
+	if (!ptr)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	while (i < count)
 		ptr[i++] = ft_dup(str, charset, &index);
 	ptr[i] = 0;

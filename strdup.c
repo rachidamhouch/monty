@@ -17,6 +17,11 @@ char	*_strdup(const char *s1)
 		len++;
 	src_copy = malloc(sizeof(char) * (len + 1));
 	if (!src_copy)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	if (!src_copy)
 		return (NULL);
 	while (s1[++index])
 		src_copy[index] = s1[index];

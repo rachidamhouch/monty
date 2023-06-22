@@ -49,6 +49,11 @@ char *rm_new_line(char *ptr)
 	while (ptr[len] && ptr[len] != '\n')
 		len++;
 	new  = malloc(len + 1);
+	if (!new)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	while (ptr[i] && ptr[i] != '\n')
 	{
 		new[i] = ptr[i];

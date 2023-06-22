@@ -1,2 +1,3 @@
-push +9
+push 3
+pus +9
 pall

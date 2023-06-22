@@ -11,6 +11,11 @@ stack_t *add_node_stack(stack_t **head, const int n)
 	stack_t	*node, *hd = *head;
 
 	node = malloc(sizeof(stack_t));
+	if (!node)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	if (!node || !head)
 	{
 		free(node);
@@ -36,6 +41,11 @@ listOfinst_t	*add_node_inst(listOfinst_t **head, instruction_t *inst)
 	listOfinst_t	*node;
 
 	node = malloc(sizeof(listOfinst_t));
+	if (!node)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	if (!node || !head)
 		return (NULL);
 	node->inst = inst;
@@ -54,6 +64,11 @@ void add_new_inst(char *o, void (*f)(stack_t **s, unsigned int l))
 	instruction_t *tmp;
 
 	tmp = malloc(sizeof(instruction_t));
+	if (!tmp)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	tmp->f = f;
 	tmp->opcode = _strdup(o);
 	add_node_inst(&Global.opcodes, tmp);

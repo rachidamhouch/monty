@@ -60,6 +60,11 @@ char	*my_strjoin(char *s1, char *s2)
 		ls1 = my_strlen(s1);
 	ptr = malloc(ls1 + ls2 + 1);
 	if (!ptr)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	if (!ptr)
 		return (0);
 	if (!s1)
 		my_memcpy(ptr, s2, ls2);

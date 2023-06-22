@@ -14,6 +14,11 @@ static char	*all(int fd, char *left)
 	readed = 1;
 	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	if (!buffer)
 		return (NULL);
 	while (readed && !my_strchr(left, '\n'))
 	{
@@ -49,6 +54,11 @@ static char	*get_line(char *line)
 		i++;
 	ptr = malloc(i + 2);
 	if (!ptr)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	if (!ptr)
 		return (NULL);
 	my_memcpy(ptr, line, i);
 	if (line[i] == '\n')
@@ -79,6 +89,11 @@ static char	*ft_left(char *line)
 	while (line[i] && line[i] != '\n')
 		i++;
 	ptr = malloc(my_strlen(line) - i + 1);
+	if (!ptr)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	if (!ptr)
 		return (NULL);
 	my_memcpy(ptr, line + i + 1, my_strlen(line) - i);

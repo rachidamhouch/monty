@@ -45,6 +45,11 @@ char	*_itoa(int n)
 	len = ft_nbrpow(n) + neg;
 	res = malloc(sizeof(char) * len + 1);
 	if (!res)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	if (!res)
 		return (NULL);
 	res[len--] = '\0';
 	while (len >= 0)
