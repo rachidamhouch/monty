@@ -32,7 +32,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	if (!is_num(Global.inst[1]))
 	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: sage: push integer\n", line_number);
 		mexit();
 	}
 	add_node_stack(stack, _atoi(Global.inst[1]));
