@@ -6,6 +6,8 @@ void rotl(stack_t **stack, unsigned int line_number)
 	stack_t *head = *stack;
 
 	(void)line_number;
+	if (!head)
+		return;
 	n = head->n;
 	while (head->next)
 		head = head->next;
