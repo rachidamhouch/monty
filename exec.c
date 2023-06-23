@@ -26,7 +26,7 @@ void find(void)
 		}
 		if (!strncmp("queue", Global.inst[0], strlen(Global.inst[0]) + 1))
 		{
-			Global.type = 1;
+			Global.type = 0;
 			return;
 		}
 		if (!strncmp(tmp->inst->opcode, Global.inst[0], strlen(Global.inst[0]) + 1))
