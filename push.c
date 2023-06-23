@@ -23,6 +23,33 @@ int is_num(char *str)
 }
 
 /**
+ * stack - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
+void stack(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	Global.type = 1;
+}
+
+/**
+ * queue - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
+void queue(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	Global.type = 0;
+}
+
+
+/**
  * push - ...
  * @stack: Arg 1.
  * @line_number: arg 2.
