@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * rotl - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
 void rotl(stack_t **stack, unsigned int line_number)
 {
 	int n, tmp;

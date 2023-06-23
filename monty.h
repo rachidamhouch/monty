@@ -60,10 +60,12 @@ typedef struct listOfinst_s
  * @fd: elm 5.
  * @opcodes: elm 6.
  * @line: elm 7.
+ * @type: elm 8.
  * Description: Global variable
  */
 typedef struct global_s
 {
+	int type;
 	char *left;
 	int ln;
 	stack_t *stack;
@@ -109,4 +111,5 @@ void    pchar(stack_t **stack, unsigned int line_number);
 void    pstr(stack_t **stack, unsigned int line_number);
 void	rotl(stack_t **stack, unsigned int line_number);
 void	rotr(stack_t **stack, unsigned int line_number);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
 #endif

@@ -35,5 +35,8 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		mexit();
 	}
-	add_node_stack(stack, _atoi(Global.inst[1]));
+	if (Global.type)
+		add_node_stack(stack, _atoi(Global.inst[1]));
+	else
+		add_dnodeint_end(stack, _atoi(Global.inst[1]));
 }

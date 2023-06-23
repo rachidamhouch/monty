@@ -17,6 +17,7 @@ void init(char *name)
 	Global.opcodes = NULL;
 	Global.inst = NULL;
 	Global.ln = 1;
+	Global.type = 1;
 	add_new_inst("pall", pall);
 	add_new_inst("push", push);
 	add_new_inst("pint", pint);

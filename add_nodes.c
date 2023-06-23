@@ -31,6 +31,39 @@ stack_t *add_node_stack(stack_t **head, const int n)
 }
 
 /**
+ * add_dnodeint_end - function that adds a new node at
+ * the end of a dlistint_t list.
+ * @head: Arg 1.
+ * @n: arg 2.
+ * Return: the address of the new element, or NULL if it failed.
+ */
+stack_t *add_dnodeint_end(stack_t **head, const int n)
+{
+	stack_t	*node, *hd = *head;
+
+	node = malloc(sizeof(stack_t));
+	if (!node || !head)
+	{
+		free(node);
+		return (NULL);
+	}
+	node->n = n;
+	node->next = NULL;
+	node->prev = NULL;
+	if (!*head)
+		*head = node;
+	else
+	{
+		while (hd->next)
+			hd = hd->next;
+		node->prev = hd;
+		hd->next = node;
+	}
+	return (node);
+}
+
+
+/**
  * add_node_inst - ...
  * @head: Arg 1.
  * @inst: arg 2.

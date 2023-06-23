@@ -19,6 +19,16 @@ void find(void)
 			free_inst(Global.inst);
 			return;
 		}
+		if (!strncmp("stack", Global.inst[0], strlen(Global.inst[0]) + 1))
+		{
+			Global.type = 1;
+			return;
+		}
+		if (!strncmp("queue", Global.inst[0], strlen(Global.inst[0]) + 1))
+		{
+			Global.type = 1;
+			return;
+		}
 		if (!strncmp(tmp->inst->opcode, Global.inst[0], strlen(Global.inst[0]) + 1))
 		{
 			tmp->inst->f(&Global.stack, Global.ln);

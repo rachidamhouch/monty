@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * rotr - ...
+ * @stack: Arg 1.
+ * @line_number: arg 2.
+ * Return: ...
+ */
 void rotr(stack_t **stack, unsigned int line_number)
 {
 	int n, tmp;
