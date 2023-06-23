@@ -22,11 +22,13 @@ void find(void)
 		if (!strncmp("stack", Global.inst[0], strlen(Global.inst[0]) + 1))
 		{
 			Global.type = 1;
+			free_inst(Global.inst);
 			return;
 		}
 		if (!strncmp("queue", Global.inst[0], strlen(Global.inst[0]) + 1))
 		{
 			Global.type = 0;
+			free_inst(Global.inst);
 			return;
 		}
 		if (!strncmp(tmp->inst->opcode, Global.inst[0], strlen(Global.inst[0]) + 1))
